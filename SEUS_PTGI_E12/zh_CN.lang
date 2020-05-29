@@ -1,0 +1,155 @@
+// 时间和动画全局设置
+option.ANIMATION_SPEED=动画速度
+option.FRAME_TIME=每帧耗时
+option.PHYSICALLY_BASED_MAX_ROUGHNESS=基于物理的最大粗糙度
+option.PHYSICALLY_BASED_MAX_ROUGHNESS.comment=如果禁用，则100%粗糙的材质的镜面反射高光将为零（旧版SEUS行为）. 如果启用，即使100％的粗糙材质仍会显示一些微妙的镜面高光. 如果启用“全光线跟踪反射”，则可能导致速度变慢!
+option.SUNLIGHT_LEAK_FIX=日光泄漏修复
+option.SUNLIGHT_LEAK_FIX.comment=修复日光渗入洞穴的问题. 可能会导致大型室外悬挑结构出现问题!
+option.CAVE_GI_LEAK_FIX=全洞穴全局光照泄露修复
+option.CAVE_GI_LEAK_FIX.comment=当玩家在天空光照为0层的环境待了一段时间时，尝试通过禁用在0层禁用天空光线、来自天空或太阳的直接全局光照、以及完全禁用天空和太阳的间接全局光照，来解决在洞穴中从天空和阳光产生的间接光泄漏. 较大的悬垂结构可能会导致误报，并消除一些应该存在的全局光照。
+
+// 阴影贴图全局设置
+option.SHADOW_MAP_BIAS.=阴影贴图偏差
+option.shadowDistance=阴影距离
+option.shadowDistance.comment=阴影距离. 如果您喜欢更好的封闭阴影，请设置较低. 如果您更喜欢较远的阴影，请设置较高。
+
+// 表面/材质全局设置
+option.TEXTURE_RESOLUTION=材质分辨率
+option.TEXTURE_RESOLUTION.comment=当前资源包的分辨率. 需要针对反射进行正确设置! 为了反射正确，请确保使用分辨率一致的资源包!
+option.FORCE_WET_EFFECT=强制潮湿效果
+option.FORCE_WET_EFFECT.comment=下雨时强迫所有表面变湿，变得反射。
+option.RAIN_SPLASH_EFFECT=雨滴泼溅效果
+option.RAIN_SPLASH_EFFECT.comment=雨水在水面和潮湿方块上起伏/飞溅。
+option.RAIN_SPLASH_BILATERAL=雨水飞溅双向过滤器
+option.RAIN_SPLASH_BILATERAL.comment=双向过滤器，用于雨水飞溅/波纹. 启用后，以性能为代价，平滑波纹纹理（没有硬像素边缘）。
+option.WATER_PARALLAX=水面视差
+option.WATER_WAVE_HEIGHT=水波高度
+option.WATER_FOG_DENSITY=水雾密度
+option.WATER_FOG_DENSITY.comment=决定有雾/浑浊的水的外观. 降低此值以获得更清澈的海水。
+option.SPEC_CHANNEL_SMOOTHNESS=纹理光滑度通道
+option.SPEC_CHANNEL_SMOOTHNESS.comment=从镜面纹理读取哪个通道（红色，绿色，蓝色或透明度）以确定平滑度. SEUS 默认使用红色通道
+option.SPEC_CHANNEL_METALNESS=纹理金属光泽通道
+option.SPEC_CHANNEL_METALNESS.comment=从镜面纹理读取哪个通道（红色，绿色，蓝色或透明度）以确定金属光泽. SEUS默认使用绿色通道
+option.SPEC_SMOOTHNESS_AS_ROUGHNESS=光滑度作为粗糙度
+option.SPEC_SMOOTHNESS_AS_ROUGHNESS.comment=如果为真，则用于确定平滑度的镜面纹理通道将被当作粗糙度（0 =完全平滑，255 =最大粗糙）. SEUS默认使用平滑度（0 =最大粗糙，255 =完全平滑）。
+
+// 光线全局设置
+option.TORCHLIGHT_COLOR_TEMPERATURE=火把光色温
+option.TORCHLIGHT_COLOR_TEMPERATURE.comment=火把光的色温（开尔文，K）
+option.HELD_LIGHT=手中物品发光（动态光源）
+option.HELD_LIGHT.comment=使手中的物品向场景中发光. 现在发出的光始终是火把色!
+option.NIGHT_BRIGHTNESS=夜间光照度
+option.SUNLIGHT_BRIGHTNESS=阳光亮度
+option.SUNLIGHT_BRIGHTNESS.comment=调整阳光相对于天空/环境光的相对亮度。
+option.GODRAYS=体积光
+option.GODRAYS.comment=不在水下时，为阳光启用体积照明（也称为“体积光”）。
+option.GODRAYS_STAINED_GLASS_TINT=体积光染色玻璃着色
+
+// 云
+option.CUMULUS_CLOUDS=积云
+option.CUMULUS_CLOUDS.comment=是否绘制积云. 会影响性能，尤其是如果启用了全局光照中的云或反射中的云。
+option.CIRRUS_CLOUDS=卷云
+option.CIRRUS_CLOUDS.comment=是否绘制卷云. 不会像积云那样影响性能. 会影响性能，尤其是如果启用了全局光照中的云或反射中的云。
+option.CLOUDS_BLOCKY=块状云
+option.CLOUDS_BLOCKY.comment=是否以块状绘制云. 要的就是MC的那种感觉!
+option.CLOUDS_IN_GI=全局光照里的云
+option.CLOUDS_IN_GI.comment=是否在全局光照光线追踪中考虑云. 使云以性能为代价影响环境照明的颜色。
+option.CLOUDS_IN_REFLECTIONS=反射里的云
+option.CLOUDS_IN_REFLECTIONS.comment=是否在反射中绘制云彩. 使云以性能为代价出现在反射中。
+
+// 后处理全局设置
+option.TONEMAP_CURVE=调和映射曲线
+option.TONEMAP_CURVE.comment=控制高光的强度. 较低的值会赋予电影效果，较高的值会赋予动画效果/自然外观. 默认：2.5
+option.EXPOSURE=曝光度
+option.EXPOSURE.comment=控制图像的整体亮度/曝光. 值越高，图像越亮. 默认：1.0
+option.GAMMA=伽马值
+option.GAMMA.comment=伽玛调整. 较低的值会使阴影更暗. 值越高，阴影越亮. 默认：1.0
+option.BLACK_DEPTH=黑色深度
+option.BLACK_DEPTH.comment=调整图像中的黑/弱光强度. 较高的值将使较暗的光变成黑色. 0.0为禁用效果。
+option.SATURATION=饱和度
+option.SATURATION.comment=饱和度调整. 值越高，图像越鲜艳. 默认：1.0
+option.BLOOM_AMOUNT=泛光强度
+option.BLOOM_AMOUNT.comment=应用于图像的光晕量。
+option.TONEMAP_OPERATOR=调和映射控制
+option.TONEMAP_OPERATOR.comment=每个色调算法定义了一种不同的方式，以将原始的内部HDR颜色信息呈现为与有限范围的监视器/显示器非常合适的颜色范围. 每个操作对整体最终图像都有不同的感觉。
+option.MOTION_BLUR=动态模糊
+option.MOTION_BLUR.comment=运动模糊. 使运动看起来有些模糊。
+option.MOTION_BLUR_HQ=高质量动态模糊
+option.MOTION_BLUR_HQ.comment=以较低的性能成本获得更高质量的运动模糊。
+option.MOTION_BLUR_INTENSITY=动态模糊强度
+option.MOTION_BLUR_INTENSITY.comment=动态模糊的强度. 较高的值将导致运动更加模糊。
+option.POST_SHARPENING=后期锐化
+option.POST_SHARPENING.comment=最终呈现之前应用于图像的锐化量。
+option.WHITE_CLIP=白色切换
+option.WHITE_CLIP.comment=将明亮的颜色切换为白色。
+
+// 实用相关全局设置
+option.VISUALIZE_DANGEROUS_LIGHT_LEVEL=危险光照水平可视化
+option.VISUALIZE_DANGEROUS_LIGHT_LEVEL.comment=启用后，光照级别为7或以下（可能会生成怪物）的区域将以红色突出显示. 用于确定生存游戏玩法中某个区域的安全性. 不考虑天空光照水平。
+
+// 光线追踪全局设置
+option.GLOWING_REDSTONE_BLOCK=发光的红石块
+option.GLOWING_REDSTONE_BLOCK.comment=如果启用，则将红石块视为光源
+option.GLOWING_LAPIS_LAZULI_BLOCK=发光的青金石块
+option.GLOWING_LAPIS_LAZULI_BLOCK.comment=如果启用，则将青金石块视为光源
+option.GLOWING_EMERALD_BLOCK=发光的绿宝石块
+option.GLOWING_EMERALD_BLOCK.comment=如果启用，绿宝石块将被视为全局光照的光源
+
+option.FULL_RT_REFLECTIONS=全光追反射
+option.FULL_RT_REFLECTIONS.comment=关闭：仅具有高平滑度值的曲面会反射. 开启：允许较粗糙的表面渲染反射（较高的计算成本）. 这可能会导致大量带有半粗糙表面的渲染缓慢!
+option.REFLECTION_TRACE_LENGTH=反射追踪距离
+option.REFLECTION_TRACE_LENGTH.comment=光线跟踪反射的最大光线长度. 较高的值会导致反射以较高的成本向更远的地方延伸. 较低的值可能导致大面积室内泄漏!
+value.REFLECTION_TRACE_LENGTH.60=低
+value.REFLECTION_TRACE_LENGTH.90=中
+value.REFLECTION_TRACE_LENGTH.120=高
+value.REFLECTION_TRACE_LENGTH.150=极致
+option.DIFFUSE_TRACE_LENGTH=漫反射全局光照追踪距离
+option.DIFFUSE_TRACE_LENGTH.comment=路径跟踪的扩散全局光照的最大射线长度. 较高的值会导致更精确的照明，同时考虑到更远的表面，且成本更高. 较低的值可能导致大面积室内泄漏!
+value.DIFFUSE_TRACE_LENGTH.60=低
+value.DIFFUSE_TRACE_LENGTH.80=中
+value.DIFFUSE_TRACE_LENGTH.100=高
+value.DIFFUSE_TRACE_LENGTH.120=极致
+
+option.RAYTRACE_GEOMETRY_QUALITY=几何追踪质量
+option.RAYTRACE_GEOMETRY_QUALITY.comment=0-特殊形状（平板，楼梯等）的方块不会被光线追踪. 1-某些具有特殊形状（楼梯，楼板，门，围栏）的方块会被追踪. 2-跟踪所有（到目前为止已编码）特殊形状的方块. 较低的设置会导致伪影，但速度更快。
+
+option.GI_RESPONSIVENESS=全局光照响应性
+option.GI_RESPONSIVENESS.comment=全局光照对照明随时间变化的响应程度如何. 较低的设置牺牲了响应能力，以提高稳定性，更好的降噪效果以及光照中的更高细节。
+option.GI_SCREEN_SPACE_TRACING=屏幕空间全局光照追踪
+option.GI_SCREEN_SPACE_TRACING.comment=允许屏幕空间中的表面反射其他东西的间接阴影和照明（生物，草等）. 如果启用，当全局光照响应度较低时，可能会留下怪异的鬼影。
+option.GI_FILTER_QUALITY=全局光照过滤器质量
+option.GI_FILTER_QUALITY.comment=全局光照过滤器的质量。
+value.GI_FILTER_QUALITY.0=低
+value.GI_FILTER_QUALITY.1=高
+option.REFLECTION_SCREEN_SPACE_TRACING=屏幕空间反射追踪
+option.REFLECTION_SCREEN_SPACE_TRACING.comment=允许屏幕空间中的表面反射其他东西（怪物，草等）。
+option.GI_SECONDARY_SAMPLES=双全局光照采样
+option.GI_SECONDARY_SAMPLES.comment=要跟踪多少个样本以进行辅助全局光照跟踪. 较高的样本会减少“Disco地板”伪影，这通常是在反射中看到的，但会降低性能。
+
+option.GI_LIGHT_BLOCK_INTENSITY=方块发光强度
+option.GI_LIGHT_BLOCK_INTENSITY.comment=发光方块发出的光有多亮。
+option.GI_LIGHT_TORCH_INTENSITY=火把发光强度
+option.GI_LIGHT_TORCH_INTENSITY.comment=火把发出的光有多亮。
+
+option.GI_LEAF_TRANSPARENCY=叶片透明度
+option.GI_LEAF_TRANSPARENCY.comment=允许叶子在全局光照中部分透射光照，而不是像完整的实心方块一样完全阻挡照明. 在某些情况下可能会影响性能。
+
+option.GI_SUNLIGHT_STAINED_GLASS_TINT=阳光使染色玻璃着色
+
+option.GI_SIMPLE_SKY_TERM=简易全局光照天空模型
+option.GI_SIMPLE_SKY_TERM.comment=关闭：从天空提供真实的环境全局光照灯光颜色. 开启：为全局光照使用更简单，更不精确的天空项，以获得更好的性能
+
+// 显示选项
+screen.ATMOSPHERICS=大气选项
+screen.ATMOSPHERICS.comment=体积光，云和大气。
+screen.LIGHTING=灯光和阴影选项
+screen.LIGHTING.comment=照明颜色和强度。
+screen.SURFACE=材质表面选项
+screen.SURFACE.comment=所有关于表面和材质的渲染。
+screen.RAYTRACING=光线追踪选项
+screen.RAYTRACING.comment=RTX ON!
+screen.POSTPROCESSING=后处理选项
+screen.POSTPROCESSING.comment=色彩分级，动态模糊，最终展示效果这些东西。
+screen.UTILITY=实用设置
+screen.UTILITY.comment=游戏实用相关的东西。
+screen.WATER=水
